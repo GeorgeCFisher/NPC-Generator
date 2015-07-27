@@ -15,6 +15,10 @@ public class Roller {
     Random die = new Random();
 
     public int roll(int dice, int sides) {
+
+        if(dice == 0)
+            throw new IllegalArgumentException("Must roll at least one die.");
+
         for (int count = 0; count < dice; count++) {
             int r = die.nextInt(sides) + 1;
             diceList.add(r);
