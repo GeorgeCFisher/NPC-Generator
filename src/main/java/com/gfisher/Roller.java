@@ -12,9 +12,10 @@ public class Roller {
     public List<Integer> diceList = new ArrayList<>();
     public int result;
 
+    Random die = new Random();
+
     public int roll(int dice, int sides) {
         for (int count = 0; count < dice; count++) {
-            Random die = new Random();
             int r = die.nextInt(sides) + 1;
             diceList.add(r);
             //public String diceArray = Arrays.toString(diceList.toArray());
